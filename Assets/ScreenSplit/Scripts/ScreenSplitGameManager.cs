@@ -26,5 +26,15 @@ public class ScreenSplitGameManager : MonoBehaviour
             playerPrefabScene1.transform.Translate(Vector3.right * Time.deltaTime);
             playerPrefabScene2.transform.Translate(Vector3.right * Time.deltaTime);
         }
+        if (Input.GetKey(KeyCode.W))
+        {
+            playerPrefabScene1.transform.Translate(Vector3.up * Time.deltaTime);
+            playerPrefabScene2.transform.Translate(Vector3.up * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            playerPrefabScene1.transform.Translate(Vector3.down * Time.deltaTime);
+            playerPrefabScene2.transform.Translate(Vector3.down * Time.deltaTime);
+        }
     }
 }

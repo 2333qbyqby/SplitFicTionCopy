@@ -21,8 +21,9 @@
         {
         Name "Stencil Write"
             ZWrite Off
+
             Cull Off
-            Blend SrcAlpha OneMinusSrcAlpha // 修改为Alpha混合
+            Blend Zero One // 修改为Alpha混合
             Stencil
             {
                 Ref [_index]

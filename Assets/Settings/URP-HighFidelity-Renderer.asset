@@ -1,5 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6789349183995634154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: RenderObjects
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: RenderObjects
+    Event: 300
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 256
+      PassNames: []
+    overrideMaterial: {fileID: 2100000, guid: 87ca03a940c85d64b9001214ff4c7aa8, type: 2}
+    overrideMaterialPassIndex: 0
+    overrideShader: {fileID: 0}
+    overrideShaderPassIndex: 0
+    overrideMode: 1
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 1
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 60
 --- !u!114 &-1878332245247344467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,14 +89,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c931489f23ea164cb059cb43fccd31b, type: 3}
   m_Name: ScreenSplitRenderFeature
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   m_Material: {fileID: 2100000, guid: 9e0eb8386eb82844aba9afde22c61fe8, type: 2}
   m_Mask_Material_Circle: {fileID: 2100000, guid: c0c57dba1e2bb904e9e51b263e431677,
     type: 2}
   m_Mask_Material_Rect: {fileID: 2100000, guid: 6cd63d880ca87044ca467ac65713fc37,
     type: 2}
+  m_Mask_Material_4Split: {fileID: 2100000, guid: 900f587f6b61c084590caf57bdf08fd4,
+    type: 2}
   targetCameraTag: MainCamera
-  m_SplitType: 3
+  m_SplitType: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,7 +119,8 @@ MonoBehaviour:
   - {fileID: -1878332245247344467}
   - {fileID: -822933827606099880}
   - {fileID: 4113849706708105729}
-  m_RendererFeatureMap: adc0de57c6d2eee558c8e23b0b5a94f4017aae1b83541739
+  - {fileID: -6789349183995634154}
+  m_RendererFeatureMap: adc0de57c6d2eee558c8e23b0b5a94f4017aae1b83541739161eda7fe362c7a1
   m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
@@ -101,7 +146,7 @@ MonoBehaviour:
   m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 439
   m_TransparentLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -130,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
   m_Name: MaskScene
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     passTag: MaskScene
     Event: 300

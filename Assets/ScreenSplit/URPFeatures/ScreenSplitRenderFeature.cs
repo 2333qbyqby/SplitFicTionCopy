@@ -19,6 +19,7 @@ public class ScreenSplitRenderFeature : ScriptableRendererFeature
     [SerializeField] private Material m_Material;
     [SerializeField] private Material m_Mask_Material_Circle;
     [SerializeField] private Material m_Mask_Material_Rect;
+    [SerializeField] private Material m_Mask_Material_4Split;
     [SerializeField] private string targetCameraTag = "MainCamera";
     [SerializeField] private SplitType m_SplitType = SplitType.twoCamera;
 
@@ -35,6 +36,7 @@ public class ScreenSplitRenderFeature : ScriptableRendererFeature
                 m_RenderPass = new ScreenSplitRenderPass(m_Material, rtLeft, rtRight);
                 break;
             case SplitType.fourCamera:
+                m_RenderPass = new ScreenSplitRenderPass(m_Mask_Material_4Split, rtLeft, rtRight);
                 break;
             case SplitType.CircleMask:
                 m_RenderPass = new ScreenSplitRenderPass(m_Mask_Material_Circle, rtLeft, rtRight);

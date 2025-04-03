@@ -7,7 +7,7 @@ public class SplitManager : MonoBehaviour
     [SerializeField] private PositionSign[] positionSigns;
     [SerializeField] private Material m_Material;
 
-    private int _splitOffsetID = Shader.PropertyToID("_Center");
+    private int _splitCenterID = Shader.PropertyToID("_Center");
     private int _splitAngleID = Shader.PropertyToID("_Angle");
     public static SplitManager Instance { get; private set; }
 
@@ -48,7 +48,7 @@ public class SplitManager : MonoBehaviour
         Vector2 middlePosition = (leftScreenPos + rightScreenPos) / 2;
         //normalize到[0,1]之间
         middlePosition = new Vector2(middlePosition.x / Screen.width, middlePosition.y / Screen.height);
-        m_Material.SetVector("_Center", new Vector4(middlePosition.x,middlePosition.y, 0, 0));
+        m_Material.SetVector(_splitCenterID, new Vector4(middlePosition.x,middlePosition.y, 0, 0));
         Vector2 dir = (rightScreenPos - leftScreenPos).normalized;
         //计算角度
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
