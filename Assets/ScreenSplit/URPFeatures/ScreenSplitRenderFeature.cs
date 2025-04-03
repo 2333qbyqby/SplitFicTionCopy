@@ -7,21 +7,45 @@ using static UnityEngine.XR.XRDisplaySubsystem;
 
 public class ScreenSplitRenderFeature : ScriptableRendererFeature
 {
-
+    public enum SplitType
+    {
+        twoCamera,
+        fourCamera,
+        CircleMask,
+        RectMask,
+    }
 
 
     [SerializeField] private Material m_Material;
+    [SerializeField] private Material m_Mask_Material_Circle;
+    [SerializeField] private Material m_Mask_Material_Rect;
     [SerializeField] private string targetCameraTag = "MainCamera";
-
+    [SerializeField] private SplitType m_SplitType = SplitType.twoCamera;
 
     private ScreenSplitRenderPass m_RenderPass;
 
     public override void Create()
     {
-        Debug.Log("Create");
         var rtLeft = CameraManager.Instance != null ? CameraManager.Instance.GetLeftTexture() : null;
         var rtRight = CameraManager.Instance != null ? CameraManager.Instance.GetRightTexture() : null;
-        m_RenderPass = new ScreenSplitRenderPass(m_Material, rtLeft, rtRight);
+
+        switch (m_SplitType)
+        {
+            case SplitType.twoCamera:
+                m_RenderPass = new ScreenSplitRenderPass(m_Material, rtLeft, rtRight);
+                break;
+            case SplitType.fourCamera:
+                break;
+            case SplitType.CircleMask:
+                m_RenderPass = new ScreenSplitRenderPass(m_Mask_Material_Circle, rtLeft, rtRight);
+                break;
+            case SplitType.RectMask:
+                m_RenderPass = new ScreenSplitRenderPass(m_Mask_Material_Rect, rtLeft, rtRight);
+                break;
+            default:
+                m_RenderPass = new ScreenSplitRenderPass(m_Material, rtLeft, rtRight);
+                break;
+        }
         m_RenderPass.renderPassEvent = RenderPassEvent.AfterRenderingPostProcessing;
     }
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
