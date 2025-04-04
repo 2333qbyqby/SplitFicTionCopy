@@ -1,4 +1,6 @@
-这是一个Unity的复刻双影奇境最后一关的效果的项目，基于URP管线,new Input System，Unity版本为2022.3.47f1c1
+这是一个Unity的复刻双影奇境最后一关的效果的项目，基于URP管线,new Input System和StarterAsset，Unity版本为2022.3.47f1c1
+
+URP初学者,RenderFeature部分写的比较烂，多多包含qwq
 
 Scene1:最基础的双地图缝合，开启ScreenSplitRenderFeature，SplitType的选项设置为TwoCamera
 
