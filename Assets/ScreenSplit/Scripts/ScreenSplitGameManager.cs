@@ -28,13 +28,13 @@ public class ScreenSplitGameManager : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.W))
         {
-            playerPrefabScene1.transform.Translate(Vector3.up * Time.deltaTime);
-            playerPrefabScene2.transform.Translate(Vector3.up * Time.deltaTime);
+            playerPrefabScene1.transform.Translate(Vector3.forward * Time.deltaTime);
+            playerPrefabScene2.transform.Translate(Vector3.forward * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            playerPrefabScene1.transform.Translate(Vector3.down * Time.deltaTime);
-            playerPrefabScene2.transform.Translate(Vector3.down * Time.deltaTime);
+            playerPrefabScene1.transform.Translate(Vector3.back * Time.deltaTime);
+            playerPrefabScene2.transform.Translate(Vector3.back * Time.deltaTime);
         }
     }
 }

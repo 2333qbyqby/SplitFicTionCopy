@@ -7,12 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FourCameraSplit
-  m_Shader: {fileID: 4800000, guid: 239dc59e67167e54b8b78de7609558b1, type: 3}
+  m_Name: ScreenMix2
+  m_Shader: {fileID: 4800000, guid: f38511108f7a50843aeb2e8ca1a8cd1f, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _IFWAVE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -33,9 +34,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Angle: 360
-    - _FadeWidth: 0.006
-    - _splitInterval: 0.011
+    - _Angle: 359.99994
+    - _WaveAmplitude: 0.005
+    - _WaveFrequency: 24
+    - _WaveSpeed: 2
+    - _ifWave: 1
+    - _splitInterval: 0.003
     m_Colors:
-    - _Center: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _Center: {r: 0.49639422, g: 0.320641, b: 0, a: 0}
   m_BuildTextureStacks: []

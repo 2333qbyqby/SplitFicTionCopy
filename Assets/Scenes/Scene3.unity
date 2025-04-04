@@ -512,11 +512,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 464246695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eb234f04e8b09e4895aab69fc3c182b, type: 3}
+  m_Script: {fileID: 11500000, guid: 194c1e1af17db00418463a56a7b31723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefabScene1: {fileID: 264495226}
-  playerPrefabScene2: {fileID: 264495226}
+  window: {fileID: 264495226}
 --- !u!1 &475387456
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,11 +25,11 @@ public class WindowComtroller : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.W))
         {
-            window.transform.Translate(Vector3.up * Time.deltaTime);
+            window.transform.Translate(Vector3.down * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            window.transform.Translate(Vector3.down * Time.deltaTime);
+            window.transform.Translate(Vector3.up * Time.deltaTime);
         }
     }
 }
