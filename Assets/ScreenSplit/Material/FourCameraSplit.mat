@@ -33,8 +33,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Angle: 0
-    - _splitInterval: 0.008
+    - _Angle: 360
+    - _FadeWidth: 0.006
+    - _splitInterval: 0.011
     m_Colors:
     - _Center: {r: 0.5, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
